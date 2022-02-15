@@ -16,6 +16,7 @@
 
 ## Anotações (dividididas por tecnologia)
 
+- [História da Computação](/CC)
 - [HTML](/HTML)
 - [CSS](/CSS)
 - [JS](/JS)
