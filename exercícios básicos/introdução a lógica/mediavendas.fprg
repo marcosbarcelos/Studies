@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mptos"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-24 09:43:31 "/>
+        <attribute name="created" value="bXB0b3M7TUItTEFQVE9QOzIwMjItMDEtMjQ7IjA4OjMxOjE4ICI7MjQwNA=="/>
+        <attribute name="edited" value="bXB0b3M7TUItTEFQVE9QOzIwMjItMDEtMjQ7IjA5OjQzOjMxICI7MjsyNTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o seu nome:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <declare name="janeiro, fevereiro, marco, abril, media" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite seu total de ganhos com vendas de Janeiro:&quot;" newline="True"/>
+            <input variable="janeiro"/>
+            <output expression="&quot;Digite seu total de ganhos com vendas de Fevereiro:&quot;" newline="True"/>
+            <input variable="fevereiro"/>
+            <output expression="&quot;Digite seu total de ganhos com vendas de Mar&#231;o:&quot;" newline="True"/>
+            <input variable="marco"/>
+            <output expression="&quot;Digite seu total de ganhos com vendas de Abril:&quot;" newline="True"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro+fevereiro+marco+abril)/4"/>
+            <output expression="&quot;Sua m&#233;dia de vendas &#233;: &quot; &amp; media" newline="True"/>
+            <if expression="media&gt;=5000">
+                <then>
+                    <output expression="nome &amp; &quot;, Parab&#233;ns, voc&#234; vai receber um abono de 10%.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="nome % &quot;, Voc&#234; receber&#225; um abono de 3%.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
