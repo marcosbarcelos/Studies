@@ -19,7 +19,7 @@
 - [HTML](/HTML)
 - [CSS](/CSS)
 - [JS](/JS)
-- [GIT E GITHUB](/GIT-E-GITHUB)
+- [GIT E GITHUB](/GIT%20E%20GITHUB)
 
 ## Sobre
 
