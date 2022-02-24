@@ -20,7 +20,7 @@
 - [HTML](/HTML)
 - [CSS](/CSS)
 - [JS](/JS)
-- [GIT E GITHUB](/GIT%20E%20GITHUB)
+- [Lógica e Dados](/Lógica,%20Dados%20e%20Algoritmos)
 
 ## Sobre
 
