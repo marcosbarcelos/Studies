@@ -17,10 +17,11 @@
 ## Anotações (dividididas por tecnologia)
 
 - [História da Computação](/CC)
+- [Lógica e Dados](/Lógica,%20Dados%20e%20Algoritmos)
 - [HTML](/HTML)
 - [CSS](/CSS)
 - [JS](/JS)
-- [Lógica e Dados](/Lógica,%20Dados%20e%20Algoritmos)
+- [PY](/python)
 
 ## Sobre
 

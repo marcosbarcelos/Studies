@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+            /* crie um programa que faça os seguintes passos
+        1. entrada de dados: ler de uma conta e quantos clientes irão pagar
+        2. processamento: calcular o valor a ser pago igualmente por cada cliente
+        3. saída: informar o resultado
+        */        
+    
+    var valorConta = Number(prompt("Valor da conta R$:")); // obtém o valor total da conta
+    var clientes = Number(prompt("N° de clientes:")); // obtém o n° de clientes a dividir a conta
+    var valorPorCliente = valorConta / clientes; // calcula o valor a ser distribuido por cliente
+
+    alert("O valor a ser pago por cliente é de R$: " + valorPorCliente.toFixed(2));
+</script>
+
+<body>
+    
+</body>
+</html>

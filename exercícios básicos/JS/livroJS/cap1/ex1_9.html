@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+                /* crie um programa que faça os seguintes passos
+                    1. entrada de dados: leia e converta o valor de um jantar com prompt
+                    2. processamento: calcular a taxa de 10% do garçon
+                    3. saída: informar o valor total a ser pago (jantar + taxa)
+                */   
+
+        var jantar = Number(prompt("Valor do Jantar R$:")); // recebe o valor parcial da conta
+        var garcom = jantar * 0.10; // calcula os 10% do garçom
+        var total = jantar + garcom; // calcula o total final da conta
+
+        alert("Taxa garçom R$: " + garcom.toFixed(2) + "\nTotal R$: " + total.toFixed(2))
+        // /n cria uma quebra de linha e .tofixed() indica a quantidade de casas decimais/ aproximação pode ser criada.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
