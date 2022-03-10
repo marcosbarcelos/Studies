@@ -88,7 +88,7 @@ Math.pow(3, 2) // 9
 // retorna um número aleatório entre 0 e 1, com várias casas decimais
 Math.random() // 0...
 
-//arredonda para o valorr inteiro mais próximo (caso < .5 para baixo) (caso >.4 para cima)
+//arredonda para o valor inteiro mais próximo (caso < .5 para baixo) (caso >.4 para cima)
 Math.round(2.7) //3
 
 // retorna a raiz quadrada do numero
