@@ -31,7 +31,7 @@ function calcularNotas() {
 
     //calcula a quantidade de notas de 100
     const notasCem = Math.floor(saque / 100);
-    var resto = saque % 100;
+    let resto = saque % 100;
 
     //calcula a quantidade de notas de 50
     const notasCinquenta = Math.floor(resto / 50);
