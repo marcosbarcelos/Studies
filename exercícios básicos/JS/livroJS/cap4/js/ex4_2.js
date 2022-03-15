@@ -1,29 +1,29 @@
-function listarNumeros() {
-  // cria referência aos elementos que a function irá manipular 
-  var inNumero = document.getElementById("inNumero");
-  var outResposta = document.getElementById("outResposta");
-    
-  var numero = Number(inNumero.value);   // obtém o número informado
+const btDecrescer = document.getElementById('btDecrescer');
 
-  // verifica validade do número
-  if (numero == 0 || isNaN(numero)) {
-    alert("Informe um número válido...");
-    inNumero.focus();
-    return;
-  }
+function decrescer() {
+    //referencia elementos html
+    const inNumero = document.getElementById('inNumero');
+    const outResposta = document.getElementById('outResposta');
 
-  // inicializa variável resposta
-  var resposta = "Entre " + numero + " e 1: ";
+    //obtém valor do campo de entrada
+    const numero = Number(inNumero.value);
 
-  // cria um for decrescente
-  for (var i = numero; i > 0; i = i - 1) {
-    // resposta vai acumulando números (e vírgulas)
-    resposta = resposta + i + ", ";
-  }
+    //verifica se o valor é diferente de empty ou not a number
+    if (numero == 0 || isNaN(numero)) {
+        alert('Infor um valor válido');
+        inNumero.focus();
+        return;
+    }
 
-  // altera o conteúdo de outResposta
-  outResposta.textContent = resposta;
+    let resposta = `Entre ${numero} e 1: ${numero}`;
+
+    //i = varia de partida; enquanto condição true i > 0; i-1
+    for (let i = numero - 1; i > 0; i--) {
+        resposta = `${resposta}, ${i} `
+    }
+    //adiciona o ponto ao final do resultado
+    resposta = `${resposta}.`
+    outResposta.textContent = resposta
 }
-// referencia elemento e após associa function ao evento click
-var btDecrescer = document.getElementById("btDecrescer");
-btDecrescer.addEventListener("click", listarNumeros);
+
+btDecrescer.addEventListener('click', decrescer);
