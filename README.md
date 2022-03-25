@@ -14,14 +14,13 @@
   <a href="#sobre">Sobre este repositório</a>
 </p>
 
-## Anotações (dividididas por tecnologia)
+#### Seções
 
-- [História da Computação](/CC)
-- [Lógica e Dados](/Lógica,%20Dados%20e%20Algoritmos)
-- [HTML](/HTML)
-- [CSS](/CSS)
-- [JS](/JS)
-- [PY](/python)
+    Studies/
+            exercícios básicos
+            livros
+            resumos
+
 
 ## Sobre
 
