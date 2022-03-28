@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url(assets/bg-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 70vh;
+}
+
+header nav {
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  text-transform: uppercase;
+  border: 2px solid white;
+  color: white;
+}
+
+header nav a:hover {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+header main {
+  text-align: center;
+  margin-top: 10%;
+}
+header main h1 {
+  font-size: 45px;
+  margin-bottom: 45px;
+}
+header main a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-bottom: 2px solid white;
+}
