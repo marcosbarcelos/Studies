@@ -1,50 +1,109 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ccc;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+#hero-banner {
   background-image: url(assets/bg-3.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 500px;
+  background-position: right center;
   background-size: cover;
   color: white;
-  height: 70vh;
+  list-style: none;
 }
 
-header nav {
+nav {
   text-align: right;
-  padding-top: 20px;
-  padding-right: 15px;
+  padding: 15px 15px 0 0;
 }
 
-header nav a {
+nav a {
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 8px;
+  color: white;
   text-transform: uppercase;
-  border: 2px solid white;
-  color: white;
+  background-color: rgba( 0, 0, 0, 0.5);
+  padding: 8px;
+  border: 1px solid white;
 }
 
-header nav a:hover {
-  background-color:rgba(0, 0, 0, 0.5);
+nav a:hover {
+  background-color: rgba( 0, 0, 0, 0.45);
 }
 
-header main {
+.hero-intro {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 150px;
 }
-header main h1 {
-  font-size: 45px;
-  margin-bottom: 45px;
+
+.hero-intro h1 {
+  font-size: 42px;
+  /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+  text-shadow: 1px 1px 2px black;
+  text-transform: uppercase;
 }
-header main a {
-  text-decoration: none;
+
+.hero-intro a {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  text-decoration: none;
+  background-color: rgba( 0, 0, 0, 0.5);
+  padding: 8px;
   border-bottom: 2px solid white;
+  font-size: 18px;
 }
+
+.section-content {
+  background-color: white;
+  padding: 10px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 15px;
+  overflow: auto;
+}
+
+.section-content header h2 {
+  font-weight: bold;
+  padding: 8px;
+  background-color: #eee;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  float: left;
+  width: 32%;  
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card.n1, .card.n2 {
+  margin-right: 2%;
+}
+
+.card p {
+  background-color: #393535;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0;
+  letter-spacing: 1.2px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+footer p {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
