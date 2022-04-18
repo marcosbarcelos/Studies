@@ -1,6 +1,13 @@
-//entrada de dados e conversão de string para número
-var num1 = Number(prompt('Insira um número'));
-var num2 = Number(prompt('Insira um segundo número'));
+//entrada de dados
+var num1 = prompt('Insira um número');
+var num2 = prompt('Insira um segundo número');
+
+//converte os dados otidos como string para number com casa decimal
+num1 = parseFloat(num1)
+num2 = parseFloat(num2)
+
+/* parseFloat - converte para numero e mantém as casas decimais
+   parseInt - converte para numeros mas retira a casa decimal */ 
 
 //operção matemática de soma
 var soma = num1 + num2;
