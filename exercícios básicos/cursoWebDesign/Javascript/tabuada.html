@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btnCriarTabuada">Criar Tabuada</button>
+  <button id="btnLimparTabuada">Limpar Tabuada</button>
+
+  <div id="output"></div>
+
+  <script>
+    var output = document.getElementById('output');
+    var btnCriarTabuada = document.getElementById('btnCriarTabuada');
+    var btnLimparTabuada = document.getElementById('btnLimparTabuada');
+
+    function criarTabuada() {
+      //declara e converte a entrada do tipo string para number float
+      var n = parseFloat(prompt('Digite um número:'));
+
+      //invoca a função de limpar tabuada antes de iniciar uma nova tabuada
+      limparTabuada()
+
+      //variavel de indice
+      var i = 1;
+      //inicia a variavel de armazenamento
+      var mensagem = ''
+
+      //laço de repetição while (enquanto i menor ou igual a 1000 faça...)
+      while(i <= 1000) {
+        //mensagem = mensagem + ...
+        mensagem += n + ' x ' + i + ' = ' + (n * i) + '<br>';
+        //contador, garante que o loop irá ter uma saída (false)
+        i++;
+      }
+      output.innerHTML = mensagem;
+    }
+
+    function limparTabuada() {
+      mensagem = '';
+      output.innerHTML = mensagem;
+    }
+    
+    btnCriarTabuada.addEventListener('click', criarTabuada);
+    btnLimparTabuada.addEventListener('click', limparTabuada);
+  </script>
+</body>
+</html>
