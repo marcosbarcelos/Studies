@@ -9,6 +9,5 @@ var modulo = n1 % n2;
 //calcula potenciação
 var exponenciacao = n1 ** n2;
 
-alert('o resto da divisão de ' + n1 + ' e ' + n2 + ' é: ' + modulo)
-alert('a potênciação de ' + n1 + ' e ' + n2 + ' é: ' + exponenciacao)
-
+alert("o resto da divisão de " + n1 + " e " + n2 + " é: " + modulo);
+alert("a potênciação de " + n1 + " e " + n2 + " é: " + exponenciacao);
