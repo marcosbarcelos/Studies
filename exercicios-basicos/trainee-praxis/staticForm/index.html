@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main__section {
+      text-align: center;
+      background-color: #eee;
+      padding: 5rem;
+      border-radius: 1rem;
+    }
+
+    .section__title {
+      font-size: 2.2rem;
+    }
+
+    .section__form {
+      padding: 0.8rem;
+    }
+
+    .form__input {
+      display: block;
+      margin: 1.2rem;
+      padding: 1.5rem;
+      width: 22rem;
+      border: none;
+      border-radius: 0.7rem;
+    }
+
+    .form__textarea {
+      padding: 1.8rem;
+      min-width: 22rem;
+      border: none;
+      border-radius: 0.7rem;
+    }
+
+    .form__input.--btn {
+      border: 0.1rem solid black;
+      border-radius: 1.2rem;
+      cursor: pointer;
+      transition: background-color .2s linear;
+    }
+
+    .form__input.--btn:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+    <section class="main__section">
+      <h1 class="section__title">Entre em Contato</h1>
+      <form action="https://api.staticforms.xyz/submit" method="post" class="section__form">
+        <input type="hidden" name="accessKey" value="a6782690-65ac-496d-8ea0-0b06b8992691"/>
+        <input type="hidden" name="redirectTo" value="https://decorecerto.com/pages/envio-de-informacoes"/>
+        <input type="text" name="name" required placeholder="Nome" class="form__input"/>
+        <input type="email" name="email" required placeholder="E-mail" class="form__input"/>
+        <textarea name="message" placeholder="Digite sua mensagem" class="form__textarea"></textarea>
+        <input type="submit" value="Enviar" class="form__input --btn"/>
+      </form>
+    </section>
+</body>
+</html>
