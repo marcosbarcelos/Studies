@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --dark: #0c0c0c;
+  --light-gold: #dcca87;
+  --lightest: #ffff;
+  --light-white: #f5efdb;
+  --grey: #aaa;
+  --font-main: "Cormorant Upright", serif;
+  --font-menu: "Arial";
+  --font-signature: "Allura", cursive;
+  --main-font-size: 6.5rem;
+  --logo-font-size: 3.2rem;
+  --title-font-size: 6.4rem;
+  --menu-font-size: 1.5rem;
+  --desc-font-size: 2rem;
+  --about-font-size: 1.4rem;
+  --ilustration: 32rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--dark);
+}
+
+a:hover {
+  color: #dcca87;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.header__logo {
+  font-size: var(--logo-font-size);
+  font-weight: 200;
+}
+
+.logo__title {
+  color: var(--lightest);
+  text-transform: uppercase;
+}
+
+.header__nav {
+  font-size: var(--menu-font-size);
+  font-family: var(--font-menu);
+}
+
+.nav__menu__items {
+  display: inline;
+  margin: 0.8rem;
+}
+
+.nav__menu__items--link {
+  color: var(--lightest);
+  transition: color 0.3s ease-out;
+}
+
+.header__others {
+  font-size: var(--menu-font-size);
+  font-family: var(--font-menu);
+}
+
+.others__option {
+  color: var(--lightest);
+}
+
+.others__option--divisor::before {
+  content: "|";
+  color: white;
+  margin: 0 1.2rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assets/hero.jpg) no-repeat center bottom;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  text-align: center;
+}
+
+.content__title {
+  font-size: var(--main-font-size);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--light-gold);
+}
+
+.content__desc {
+  color: var(--lightest);
+  font-size: var(--desc-font-size);
+}
+
+.content__desc--mark {
+  color: var(--light-gold);
+}
+
+.main {
+  background: url(../assets/wave.svg) top center;
+   margin-top: 5rem;
+}
+
+.main__team {
+  padding: 15rem;
+}
+
+.team__about {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__image {
+  width: 42rem;
+  height: 52rem;
+  border: 1.8px solid rgba(220, 202, 135, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
+
+.about__desc {
+  position: absolute;
+  left: 45rem;
+  top: 0;
+  font-size: var(--about-font-size);
+}
+
+.desc__spec {
+  font-family: var(--font-main);
+  font-size: var(--desc-font-size);
+  color: var(--lightest);
+  font-weight: 500;
+}
+
+.desc__name {
+  font-size: var(--title-font-size);
+  font-family: var(--font-main);
+  color: var(--light-gold);
+}
+
+.desc__paragraph {
+  margin: 2rem 0;
+  font-style: italic;
+  font-weight: 500;
+  font-family: var(--font-menu);
+  letter-spacing: 0.09rem;
+  color: var(--grey);
+}
+
+.desc__achivements {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: var(--light-white);
+}
+
+.achivements__item {
+  margin: 3.5rem 0;
+}
+
+.achivements__item::before {
+  content: ' — ';
+  width: 2rem;
+  color: var(--light-gold);
+}
+
+.desc__signature {
+  font-family: var(--font-signature);
+  font-size: var(--title-font-size);
+  color: var(--grey);
+  opacity: 0.8;
+}
+
+.main__view {
+  padding: 0 0 15rem 0;
+}
+
+.view__image {
+  height: 40rem;
+  width: 100%;
+}
+
+.main__menu {
+  padding: 0 0 15rem 0;
+  display: flex;
+  justify-content: center;
+  color: var(--lightest);
+  position: relative;
+}
+
+.menu__desc {
+  margin-right: 22rem;
+}
+
+.desc__name.--menu {
+  margin-bottom: 2rem;
+}
+
+.desc__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list__option {
+  margin: 1rem 0;
+}
+
+.option__title {
+  color: var(--light-gold);
+  font-size: var(--desc-font-size);
+  text-transform: capitalize;
+}
+
+.option__desc {
+  color: var(--grey);
+  font-size: var(--menu-font-size);
+  font-family: var(--font-menu);
+  padding-top: 0.8rem;
+}
+
+.menu__image {
+  color: #aaa;
+  font-size: var(--ilustration);
+}
+
+.image__banner {
+  height: 35rem;
+  width: 25rem;
+  border: 1.8px solid rgba(220, 202, 135, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+}
+
+.image__logo {
+  position: absolute;
+  right: 35rem;
+  bottom: 18rem;
+  opacity: 0.5;
+}
+
+.footer {
+  background: url(/assets/mask.svg);
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer__container {
+  position: absolute;
+  top: -5rem;
+  padding: 5rem;
+  background-color: var(--dark);
+  border: 1.8px solid rgba(220, 202, 135, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.container__title {
+  font-size: var(--logo-font-size);
+}
+
+.container__desc {
+  color: var(--lightest);
+  font-size: var(--menu-font-size);
+  margin-bottom: 4rem;
+}
+
+.container__form {
+  font-size: var(--menu-font-size);
+  line-height: 2.8rem;
+  letter-spacing: 0.04rem;
+}
+.form__input--email {
+  width: 35rem;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid #F5EFDB;
+  font-family: var(--font-main);
+}
+
+.form__input--submit {
+  padding: 0.9rem;
+  background-color: var(--light-gold);
+  color: var(--dark);
+  font-family: var(--font-main);
+}
+
+
+/* animação geral (fade-in)*/
+[data-anime] {
+  opacity: 0;
+  transition: opacity .6s ease-out, transform 1s ease-out;
+  visibility: hidden;
+  will-change: opacity, visibility;
+}
+
+[data-anime="fade-in"] {
+  transform: translateY(10vh);
+}
+
+[data-anime].isvisible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

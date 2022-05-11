@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcelos - Pub & Restaurante</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="#" class="logo__title">Barcelos</a>
+    </div>
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__menu__items"><a href="#" class="nav__menu__items--link">Início</a></li>
+        <li class="nav__menu__items"><a href="#team" class="nav__menu__items--link">Equipe</a></li>
+        <li class="nav__menu__items"><a href="#menu" class="nav__menu__items--link">Menu</a></li>
+        <li class="nav__menu__items"><a href="#bookTables" class="nav__menu__items--link">Reservas</a></li>
+        <li class="nav__menu__items"><a href="#contact" class="nav__menu__items--link">Contatos</a></li>
+      </ul>
+    </nav>
+    <div class="header__others">
+      <a href="#" class="others__option">Entrar / Registrar</a>
+      <span class="others__option--divisor"></span>
+      <a href="#" class="others__option">Reservas</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="content__title">Barcelos</h1>
+      <p class="content__desc">Pub <span class="content__desc--mark">&</span> Restaurante</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <section class="main__team" id="team" data-anime="fade-in">
+      <div class="team__about">
+        <img src="assets/chef.jpg" class="about__image" alt="" loading="lazy">
+        <div class="about__desc">
+          <span class="desc__spec">Chef</span>
+          <h2 class="desc__name">Alan Tosta</h2>
+          <p class="desc__paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit. Auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque consectetur adipiscing elit.
+          </p>
+          <ul class="desc__achivements">
+            <li class="achivements__item">Graduado em Gastronomia pela Universidade Salvador, BR.</li>
+            <li class="achivements__item">Trabalhou como Chef Junior no Madero.</li>
+            <li class="achivements__item">Contribuiu com +20 receitas por onde passou.</li>
+            <li class="achivements__item">Nomeado Chef Do ano pela revista GatroBR.</li>
+          </ul>
+          <p class="desc__signature">Alan Tosta</p>
+        </div>
+      </div>
+    </section>
+    <section class="main__view" data-anime="fade-in">
+      <img src="assets/interior.jpg" class="view__image" alt="" loading="lazy">
+    </section>
+    <section class="main__menu" id="menu" data-anime="fade-in">
+      <div class="menu__desc">
+        <span class="desc__spec">Os Mais Escolhidos</span>
+        <h2 class="desc__name --menu">Menu Principal</h2>
+        <ul class="desc__list">
+          <li class="list__option">
+            <h5 class="option__title">Barcelos gourmet</h5>
+            <p class="option__desc">Lorem ipsum dolor sit <br> amet, consectetur.</p>
+          </li>
+          <li class="list__option">
+            <h5 class="option__title">Estrela quente</h5>
+            <p class="option__desc">Lorem ipsum dolor sit <br> amet, consectetur.</p>
+          </li>
+          <li class="list__option">
+            <h5 class="option__title">A Moda da casa </h5>
+            <p class="option__desc">Lorem ipsum dolor sit <br> amet, consectetur.</p>
+          </li>
+          <li class="list__option">
+            <h5 class="option__title">Escolha do Chef</h5>
+            <p class="option__desc">Lorem ipsum dolor sit <br> amet, consectetur.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="menu__image">
+        <img src="assets/food.jpg" class="image__banner" alt="" loading="lazy">
+        <span class="image__logo">B</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact" data-anime="fade-in">
+    <div class="footer__container" id="bookTables">
+      <span class="container__spec desc__spec">Reservas</span>
+      <h2 class="container__title desc__name">Inscreva-se na Lista</h2>
+      <p class="container__desc option__desc">E nunca ficará sem uma mesa prévia</p>
+      <form action="" class="container__form">
+        <input type="email" class="form__input--email" placeholder="Digite seu E-mail">
+        <input type="submit" class="form__input--submit" value="Enviar">
+      </form>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
