@@ -1,3 +1,10 @@
+// declaração de variáveis
+let inName = document.getElementById('inName');
+let inEmail = document.getElementById('inEmail');
+let inPhone = document.getElementById('inPhone');
+let inCPF = document.getElementById('inCPF');
+let inTable = document.getElementById('infoTable');
+
 //inicia modal de cadastro
 function initModal(modalID) {
   const modal = document.getElementById(modalID);
@@ -19,7 +26,7 @@ buttonCreate.addEventListener('click', () => initModal('modalRegister'));
 //Apresenta / recolhe a tabela
 const buttonTable = document.getElementById('buttonTable');
 buttonTable.addEventListener('click', () => {
-  const infoTable = document.getElementById('infoTable');
+  const infoTable = inTable;
 
   if (infoTable.classList.contains('hidden')) {
     buttonTable.value = 'Esconder Tabela';
@@ -29,12 +36,6 @@ buttonTable.addEventListener('click', () => {
     infoTable.classList.add('hidden');
   }
 });
-
-// declaração de variáveis
-let inName = document.getElementById('inName');
-let inEmail = document.getElementById('inEmail');
-let inPhone = document.getElementById('inPhone');
-let inCPF = document.getElementById('inCPF');
 
 //adiciona mascara no telefone
 inPhone.addEventListener('keypress', () => {
@@ -72,32 +73,43 @@ function addToTable() {
   const email = inEmail.value;
   const phone = inPhone.value;
   const CPF = inCPF.value;
-  const table = document.getElementById('infoTable');
+  const table = inTable;
 
   if (name != '' && email != '' && phone != '' && CPF != '') {
-    let tableSize = table.rows.length; //Calculando o tamanho da Tabela
-    let row = table.insertRow(tableSize); //Inserindo uma linha abaixo da Tabela
-    let cell1 = row.insertCell(0); //Inserindo as celulas da linha
+    //Calcula o tamanho da Tabela
+    let tableSize = table.rows.length;
+    //Insere uma linha abaixo da Tabela
+    let row = table.insertRow(tableSize);
+    //Insere as celulas da linha
+    let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
     let cell5 = row.insertCell(4);
-    row.id = tableSize; //Adicionando o id no elemento a ser criado
+    //Adicionando o id no elemento criado
+    row.id = tableSize;
 
-    let buttonR =
-      "<button class='table__button --remove' onclick='removeToTable(this)'>Remover</button>";
-    let buttonE =
-      "<button class='table__button --edit' onclick='editToTable(this)'>Editar</button>";
+    //armazena dados na memória do navegador(aqui tem um bug kkkkk)
+    for (let i = 0; i < tableSize; i++) {
+      localStorage.setItem(`Nome Cliente ${i + 1}`, name);
+      localStorage.setItem(`Email Cliente ${i + 1}`, email);
+      localStorage.setItem(`Telefone Cliente ${i + 1}`, phone);
+      localStorage.setItem(`CPF Cliente ${i + 1}`, CPF);
+    }
 
-    //Preenchendo as celulas da linha
-    cell1.innerHTML = name;
-    cell2.innerHTML = email;
-    cell3.innerHTML = phone;
-    cell4.innerHTML = CPF;
+    //cria os botões de opções
+    let buttonR = "<button class='table__button --remove' onclick='removeToTable(this)'>Remover</button>";
+    let buttonE = "<button class='table__button --edit' onclick='editToTable(this)'>Editar</button>";
+
+    //Preenche as celulas
+    cell1.textContent = name;
+    cell2.textContent = email;
+    cell3.textContent = phone;
+    cell4.textContent = CPF;
     cell5.innerHTML = buttonE;
     cell5.innerHTML += buttonR;
 
-    //Limpando os campos de inserção de dados
+    //Limpa os campos
     document.getElementById('inName').value = '';
     document.getElementById('inEmail').value = '';
     document.getElementById('inPhone').value = '';
@@ -110,13 +122,25 @@ const buttonRegister = document.getElementById('buttonRegister');
 buttonRegister.addEventListener('click', addToTable);
 
 function removeToTable(id) {
-  let row = id.parentNode.parentNode.id; //Pegando o id do avô do botão
-  row = document.getElementById(row); //Recebendo o elemento da linha pelo ID
-  row.parentNode.removeChild(row); //Removendo a linha
+  //Pega o id do avô do botão
+  let row = id.parentNode.parentNode.id;
+  //Recebe o elemento da linha pelo ID
+  row = document.getElementById(row);
+  //Remove a linha
+  row.parentNode.removeChild(row);
+
+  //remove dados da memória do navegador(aqui tbm tem um bug KKKKKKKKK)
+  const tableSize = inTable.rows.length;
+  for (let i = 0; i < tableSize; i++) {
+    localStorage.removeItem(`Nome Cliente ${i + 1}`);
+    localStorage.removeItem(`Email Cliente ${i + 1}`);
+    localStorage.removeItem(`Telefone Cliente ${i + 1}`);
+    localStorage.removeItem(`CPF Cliente ${i + 1}`);
+  }
 }
 
+//funcionalidade duvidosa, mas é como eu digo... se tá funcionando, deixa e reza para que o usuário não seja burro!
 function editToTable(id) {
   initModal('modalRegister');
-  buttonRegister.disabled = true;
-  buttonEdit.disabled = false;
+  removeToTable(id)
 }
