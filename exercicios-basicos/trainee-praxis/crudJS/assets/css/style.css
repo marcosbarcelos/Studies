@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c608c;
+  padding: 3rem;
+}
+
+.header__title {
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.main {
+  font-size: 1.5rem;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section__button {
+    margin: 3rem 9.7rem;
+    padding: 1.5rem;
+    background: linear-gradient(to left, #8a2be2, #6c608c);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.4rem;
+    transition: all 0.3s ease-in;
+}
+
+.section__button:hover {
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #8a2be2, #6c608c);
+}
+
+.section__table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.section__table th {
+  background-color: #6c608c;
+  padding: 10px;
+  color: white;
+  font-weight: 100;
+}
+
+.section__table td, th {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+}
+
+.section__table td {
+  padding: 0.5rem;
+}
+
+.section__table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.section__table tr:hover {
+  background-color: #ddd;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.visible {
+  display: flex;
+}
+
+.modal__content {
+  background: white;
+  width: 60%;
+  min-width: 300px;
+  padding: 40px;
+  border: 10px solid #6c608c;
+  box-shadow: 0 0 0 10px #fff;
+  position: relative;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.visible .modal__content {
+  animation: modal .3s;
+}
+
+.content__button {
+  position: absolute;
+  font-size: 1.2em;
+  top: -30px;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: #6c608c;
+  color: #fff;
+  font-family: "PT Mono", monospace;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+}
