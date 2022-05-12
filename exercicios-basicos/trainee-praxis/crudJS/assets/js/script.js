@@ -1,3 +1,4 @@
+//inicia modal de cadastro
 function initModal(modalID) {
   const modal = document.getElementById(modalID);
   //verifica se o modal existe
@@ -15,13 +16,49 @@ function initModal(modalID) {
 const buttonCreate = document.getElementById('buttonCreate');
 buttonCreate.addEventListener('click', () => initModal('modalRegister'));
 
-//adicionar mascara no cpf
+//Apresenta / recolhe a tabela
+const buttonTable = document.getElementById('buttonTable');
+buttonTable.addEventListener('click', () => {
+  const infoTable = document.getElementById('infoTable');
+
+  if (infoTable.classList.contains('hidden')) {
+    buttonTable.value = 'Esconder Tabela';
+    infoTable.classList.remove('hidden');
+  } else {
+    buttonTable.value = 'Mostrar Tabela';
+    infoTable.classList.add('hidden');
+  }
+});
+
+// declaração de variáveis
 let inName = document.getElementById('inName');
 let inEmail = document.getElementById('inEmail');
 let inPhone = document.getElementById('inPhone');
 let inCPF = document.getElementById('inCPF');
+
+//adiciona mascara no telefone
+inPhone.addEventListener('keypress', () => {
+  const phoneLength = inPhone.value.length;
+
+  switch (phoneLength) {
+    case 0:
+      inPhone.value += '(';
+      break;
+    case 3:
+      inPhone.value += ') ';
+      break;
+    case 6:
+      inPhone.value += ' ';
+      break;
+    case 11:
+      inPhone.value += '-';
+      break;
+  }
+});
+
+// adiciona mascara no CPF
 inCPF.addEventListener('keypress', () => {
-  let CPFLength = inCPF.value.length;
+  const CPFLength = inCPF.value.length;
 
   if (CPFLength == 3 || CPFLength == 7) {
     inCPF.value += '.';
@@ -45,19 +82,20 @@ function addToTable() {
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
     let cell5 = row.insertCell(4);
-    let cell6 = row.insertCell(5);
     row.id = tableSize; //Adicionando o id no elemento a ser criado
 
-    let buttonR = "<button class='remove-btn' onclick='removeToTable(this)'>Remover</button>";
-    let buttonE = "<button class='edit-btn' onclick='editToTable(this)'>Editar</button>";
+    let buttonR =
+      "<button class='table__button --remove' onclick='removeToTable(this)'>Remover</button>";
+    let buttonE =
+      "<button class='table__button --edit' onclick='editToTable(this)'>Editar</button>";
 
     //Preenchendo as celulas da linha
     cell1.innerHTML = name;
     cell2.innerHTML = email;
     cell3.innerHTML = phone;
     cell4.innerHTML = CPF;
-    cell5.innerHTML = buttonR;
-    cell6.innerHTML = buttonE;
+    cell5.innerHTML = buttonE;
+    cell5.innerHTML += buttonR;
 
     //Limpando os campos de inserção de dados
     document.getElementById('inName').value = '';
@@ -78,7 +116,7 @@ function removeToTable(id) {
 }
 
 function editToTable(id) {
-  initModal('modalRegister')
-  buttonRegister.disabled = true
-  buttonEdit.disabled = false
+  initModal('modalRegister');
+  buttonRegister.disabled = true;
+  buttonEdit.disabled = false;
 }
