@@ -13,35 +13,51 @@
     </header>
 
     <main class="main">
+      <input
+        type="button"
+        value="Cadastrar Cliente"
+        class="section__button"
+        id="buttonCreate"
+      />
+      <input
+        type="button"
+        value="Esconder Tabela"
+        class="section__button --2"
+        id="buttonTable"
+      />
       <section class="main__section">
-        <input type="button" value="Cadastrar Cliente" class="section__button" id="buttonCreate"/>
         <table class="section__table" id="infoTable">
           <tr id="0">
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
             <th>CPF</th>
-            <th>Remover</th>
-            <th>Editar</th>
+            <th>Opções</th>
           </tr>
         </table>
       </section>
     </main>
 
-    <div id="modalRegister" class="modal">
+    <section id="modalRegister" class="section__modal">
       <div class="modal__content">
         <button class="content__button" id="buttonCloseModal">x</button>
         <h3 class="content__title">Dados do Cliente</h3>
         <form>
-          <input type="text" id="inName" placeholder="Nome">
-          <input type="email" required id="inEmail" placeholder="Email">
-          <input type="number" require id="inPhone" placeholder="Telefone">
-          <input type="text" id="inCPF" placeholder="CPF" minlength="14" maxlength="14">
-          <input type="button" id="buttonRegister" value="Cadastrar">
-          <input type="button" id="buttonEdit" value="Editar" disabled>
+          <input type="text" id="inName" placeholder="Nome" />
+          <input type="email" required id="inEmail" placeholder="Email" />
+          <input type="text" id="inPhone" placeholder="Telefone" />
+          <input
+            type="text"
+            id="inCPF"
+            placeholder="CPF"
+            minlength="11"
+            maxlength="14"
+          />
+          <input type="button" id="buttonRegister" value="Cadastrar" />
+          <input type="button" id="buttonEdit" value="Editar" disabled />
         </form>
       </div>
-    </div>
+    </section>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
