@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  
-  <script src="assets/js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Cadastro de Clientes</h1>
+    </header>
+
+    <main class="main">
+      <section class="main__section">
+        <input type="button" value="Cadastrar Cliente" class="section__button" id="buttonCreate"/>
+        <table class="section__table" id="infoTable">
+          <tr id="0">
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <th>Remover</th>
+            <th>Editar</th>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <div id="modalRegister" class="modal">
+      <div class="modal__content">
+        <button class="content__button" id="buttonCloseModal">x</button>
+        <h3 class="content__title">Dados do Cliente</h3>
+        <form>
+          <input type="text" id="inName" placeholder="Nome">
+          <input type="email" required id="inEmail" placeholder="Email">
+          <input type="number" require id="inPhone" placeholder="Telefone">
+          <input type="text" id="inCPF" placeholder="CPF" minlength="14" maxlength="14">
+          <input type="button" id="buttonRegister" value="Cadastrar">
+          <input type="button" id="buttonEdit" value="Editar" disabled>
+        </form>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
