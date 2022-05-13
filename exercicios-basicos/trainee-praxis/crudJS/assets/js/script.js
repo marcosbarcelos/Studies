@@ -1,9 +1,9 @@
 // declaração de variáveis
-let inName = document.getElementById('inName');
-let inEmail = document.getElementById('inEmail');
-let inPhone = document.getElementById('inPhone');
-let inCPF = document.getElementById('inCPF');
-let inTable = document.getElementById('infoTable');
+const inName = document.getElementById('inName');
+const inEmail = document.getElementById('inEmail');
+const inPhone = document.getElementById('inPhone');
+const inCPF = document.getElementById('inCPF');
+const inTable = document.getElementById('infoTable');
 
 //inicia modal de cadastro
 function initModal(modalID) {
