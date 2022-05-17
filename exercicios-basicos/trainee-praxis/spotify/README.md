@@ -3,7 +3,7 @@
 Replicação da mais nova página do spotify, abordando conceitos em Javascript, HTML e CSS.
 
 ## Acesse
-https://spotifyclone-gamma.vercel.app/  
+https://spotifyclone-praxis.vercel.app/  
 
 ![Screenshot](telas/principal.png)
 
