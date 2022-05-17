@@ -71,7 +71,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* responsividade */
+/* responsividade mobile*/
 @media (max-width: 511.98px) {
   .form__input {
     width: 22rem;
