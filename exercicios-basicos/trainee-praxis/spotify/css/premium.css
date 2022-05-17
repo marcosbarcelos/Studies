@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+@font-face {
+  font-family: spotify;
+  src: url('https://open.scdn.co/fonts/CircularSpUIv3T-Book.woff2');
+}
+
+html {
+  font-size: 62.5%;
+  font-family: spotify;
+}
+
+body {
+  height: 100vh;
+  background-color: #fefefe;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.header__logo {
+  width: 23rem;
+  filter: invert(100%);
+}
+
+.section__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+}
+
+.main__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__input {
+  margin: 0.7rem;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  width: 50rem;
+}
+
+.main__button {
+  color: black;
+  background-color: #1ed760;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  will-change: box-shadow, transform;
+}
+
+.main__button:hover {
+    background-color: #2DE26D;
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px,
+                rgba(45, 35, 66, 0.2) 0 7px 13px -3px,
+                rgba(0, 0, 0, 0.1) 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
