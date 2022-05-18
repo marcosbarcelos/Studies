@@ -38,6 +38,9 @@ function validate() {
     alert('Preencha os campos corretamente!');
     inEmail.focus;
   } else {
+    localStorage.setItem('email', inEmail.value)
+    localStorage.setItem('telefone', inPhone.value)
+    localStorage.setItem('CPF', inCPF.value)
     alert('Dados Cadastrado, seu premium será ativado em até 24 horas.')
   }
 }
