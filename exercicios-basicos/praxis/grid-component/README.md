@@ -1,5 +1,5 @@
 <h1 align="center">
-    Component Grid - FrontEndMentor
+    Component Grid - Frontend Mentor
 </h1>
 <p align="center">
     Projeto de teste para padrões da praxis basseado no desafio <a href="https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc" target="_blank">Simple Price Component Grid</a>
