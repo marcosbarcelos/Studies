@@ -1,0 +1,23 @@
+h1 {
+  font-family: cursive;
+  /* espaçamento externo ao box */
+  margin: 60px;
+  /* borda do box entre o margin e o padding caso exista */
+  border: 2px solid black;
+  text-align: center;
+}
+
+h1::first-letter {
+  color: red;
+  font-size: 45px;
+}
+
+p {
+  /* preenchimento interno do box */
+  padding: 2px;
+}
+
+p::first-letter {
+  font-size: 52px;
+  font-weight: bold;
+}
