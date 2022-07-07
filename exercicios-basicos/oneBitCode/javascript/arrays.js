@@ -1,3 +1,6 @@
+//cria um array vazio - utilizamos arrays quando as informações por si sós já fazem sentido
+let array = []
+
 // cria um array - estrutura de dados organizada por índices
 let teams = ['Flamengo', 'Bahia', 'Corinthians'];
 teams[0] //retorna flamengo pois o array parte de 0
