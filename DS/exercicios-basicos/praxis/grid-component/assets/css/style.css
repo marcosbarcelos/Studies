@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* desenvolvido em mobile first */
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 47%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --light-weight: 400;
+  --hard-wheight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  /* 1rem equivale a 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  width: 90vw;
+  max-width: 800px;
+}
+
+.card__header {
+  padding: 3.5rem;
+}
+
+.header__title {
+  color: var(--cyan);
+  font-size: 2.6rem;
+  margin-top: 2.5rem;
+}
+
+.header__subtitle {
+  font-size: 1.8rem;
+  color: var(--bright-yellow);
+  margin: 3rem 0;
+}
+
+.header__desc {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.card__about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  padding: 3.5rem;
+  flex: 1;
+  color: #fff;
+}
+
+.about--leftside {
+  background-color: var(--cyan);
+}
+
+.about--rightside {
+  background-color: var(--light-cyan);
+}
+
+.about__desc--price {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.price--span {
+  color: #fff;
+  font-size: 5rem;
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.about__button {
+  background-color: var(--bright-yellow);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.about__list {
+  opacity: 0.7;
+  margin-top: 2rem;
+}
+
+.list__item {
+  line-height: 2.8rem;
+}
+
+/* responsividade - maiores que 600px */
+@media (min-width: 599.98px) {
+  .card__about {
+    flex-direction: row;
+  }
+}

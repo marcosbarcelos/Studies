@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!--indica ao navegador o tipo de documento-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Barcelos</title> <!--Título da aba-->
+
+    <style>
+        body {
+            background-colorr: #ccc;
+        }
+
+        /* #=id .=class */
+        #title, .subtitle, .post_title {
+            color: brown; /*mudar cor da fonte*/
+        } 
+
+        .post_title {
+            font-size: 16px; /*muda tamanho da fonte */
+            font-style: italic; /* muda estilo da fonte */
+        }
+
+        .post {
+            background-color: black;
+            padding: 10px;
+            border: 5px solid red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--início do conteúdo-->
+    <header>  <!--Cabeçalho da página-->
+        <img src="assets/lateral-removebg-preview.png"
+            alt="lustração dos personagens do filme As vantagens de ser invisivel S2"> <!--adiciona uma imagem, atributo src obrigatório, alt opicional mas boa prática-->
+        <h1 id="title">Marcos Barcelos</h1>  <!--texto de maior valor semântico-->
+    </header>
+    <section> <!--tag semântica genérica-->
+        <header>
+            <h2 class="subtitle">Posts</h2> <!--texto com segundo maior valor semântico--> 
+        </header>
+        <article class="post"> <!--representa uma seção de artigo na página-->
+            <header>
+                <h3 class="post_title">Post #1</h3>
+                <img src="assets/lateral-removebg-preview.png" alt="">
+            </header>
+            <p> <!--representa um parágrafo, conglomerado de texto.-->
+                Lorem ipsum dolor sit <a href="https://www.linkedin.com./in/marcosbarcelos/" target="_blank">Representa
+                uma ancôra (link)</a>, amet consectetur adipisicing elit. Eligendi ducimus atque eum veritatis veniam itaque dolor, illum perspiciatis explicabo cupiditate voluptas, asperiores velit impedit aut id ullam, aliquam tempore temporibus.
+            </p>
+        </article>
+    </section>
+    <footer>  <!--rodapé da página-->
+      <ul>
+          <li>
+              <a href="mailto:marcosbarcelosdev@gmail.com">Marcosbarcelosdev@gmail.com</a>
+          </li>
+          <li>
+              <a href="https://github.com/marcosbarcelos?tab=repositories" target="_blank">github</a>
+          </li>
+          <li>
+              <a href="https://www.linkedin.com./in/marcosbarcelos/" target="_blank">linkedin</a>
+          </li>
+      </ul>
+    </footer>
+</body>
+</html>

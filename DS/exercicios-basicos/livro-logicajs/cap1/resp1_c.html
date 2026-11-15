@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /* crie um programa que faça os seguintes passos
+            1. entrada de dados: ler o valor de um produto
+            2. processamento: calcular para pagamento à vista (10% desconto) ou parcelado 3x
+            3. saída: informar o resultado para ambos os caso
+        */        
+
+        var valorProduto = Number(prompt("Valor do produto R$:"));
+        var pagamentoAvista = valorProduto - (valorProduto * 0.10);
+        var pagamentoParcelado = valorProduto / 3;
+
+        alert("Preço R$: " + valorProduto.toFixed(2) + "\nÀ Vista R$: " + pagamentoAvista.toFixed(2) + "\nOu 3x de R$: " + pagamentoParcelado.toFixed(2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

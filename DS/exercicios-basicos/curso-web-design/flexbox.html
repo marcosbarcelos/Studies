@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            .flexbox{
+                height: 250px;
+                border: 1px solid red;
+
+                /* transforma o container em flex */
+                display: flex;
+                margin-bottom: 15px;
+            }
+            
+            .flexbox div{
+                background: orange;
+                width: 300px;
+                margin: 15px;
+            }
+
+            .flexbox:nth-child(4) {
+                 /* direção do container */
+                 flex-direction: row;
+                /* comportamento das linhas do container */
+                flex-wrap: wrap;
+                /* abreviação para direction e wrap */
+                flex-flow: row wrap;
+            }
+
+            .flexbox:nth-child(5) {
+                /* define o alinhamento do conteúdo */
+                justify-content: space-between;/* espaçamento entre os items  */
+                justify-content: center; /* espaçamento das bordas até o centro */
+                justify-content: space-around;/*espaçamento igual entre os items e a borda*/
+                justify-content: space-evenly;/*espaçamento igual entre dois items*/
+                justify-content: end; /* final */
+            }
+            .flexbox:nth-child(5) div {
+                width: 20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>Display Flex</h2>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajuda a centralizar na vertical</p>
+        <!-- o pai é um flex-container -->
+        <div class="flexbox">
+            <!-- os filhos são flex-items -->
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+
+        <div class="flexbox">
+            <!-- os filhos são flex-items -->
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        
+        
+    </body>
+</html>
