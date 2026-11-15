@@ -17,10 +17,14 @@
 #### Seções
 
     Studies/
-            exercícios básicos
+          CS (COMPUTER SCIENCE)
+            exercícios
             livros
             resumos
-
+          DS (DATA SCIENCE)
+          exercícios
+          livros
+          resumos
 
 ## Sobre
 
